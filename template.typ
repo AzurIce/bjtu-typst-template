@@ -1,7 +1,7 @@
 // Package for writing pseudocode, see: https://typst.app/universe/package/lovelace/
 #import "@preview/lovelace:0.3.0"
 // Package for showing Chinese fake bold, see: https://typst.app/universe/package/cuti/
-#import "@preview/cuti:0.2.1": show-cn-fakebold
+#import "@preview/cuti:0.3.0": show-cn-fakebold
 #show: show-cn-fakebold
 
 #let heiti = ("Times New Roman", "SimHei")
