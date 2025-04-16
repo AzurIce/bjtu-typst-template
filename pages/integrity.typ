@@ -24,12 +24,12 @@
   columns(2)[
     #text[
       #h(2em)本人签名：
-      #box(width: 1fr)[#line(length: 100%)]
+      #box(width: 9em)[#line(length: 100%)]
     ]
     #colbreak()
     #text[
       日期：
-      #box(width: 1fr)[#line(length: 100%)]
+      #box(width: 9em)[#line(length: 100%)]
     ]
   ]
 
