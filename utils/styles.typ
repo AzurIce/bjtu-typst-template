@@ -2,6 +2,8 @@
 #import "@preview/lovelace:0.3.0"
 // Package for showing Chinese fake bold, see: https://typst.app/universe/package/cuti/
 #import "@preview/cuti:0.3.0": show-cn-fakebold
+// Package for Configurable figure and equation numbering per section, see: https://typst.app/universe/package/i-figured
+#import "@preview/i-figured:0.2.4"
 
 #import "variables.typ": *
 
@@ -34,21 +36,24 @@
   }
   // 第二层次（节）题序和标题用小三号黑体字；
   show heading.where(level: 2): it => {
-    set text(weight: "bold", font: 字体.黑体, size: 字号.小三)
-    set block(above: 1.5em, below: 1.5em)
-    it
+    set text(weight: "regular", font: 字体.黑体, size: 字号.小三)
+    block(inset: (top: 24pt, bottom: 18pt))[
+      #it
+    ]
   }
   // 第三层次（条）题序和标题用四号黑体字；
   show heading.where(level: 3): it => {
-    set text(weight: "bold", font: 字体.黑体, size: 字号.四号)
-    set block(above: 1.5em, below: 1.5em)
-    it
+    set text(weight: "regular", font: 字体.黑体, size: 字号.四号)
+    block(inset: (top: 24pt, bottom: 18pt))[
+      #it
+    ]
   }
   // 第四及以下层次（款）题序和标题用小四号黑体字；
   show heading.where(level: 4): it => {
-    set text(weight: "bold", font: 字体.黑体, size: 字号.小四)
-    set block(above: 1.5em, below: 1.5em)
-    it
+    set text(weight: "regular", font: 字体.黑体, size: 字号.小四)
+    block(inset: (top: 24pt, bottom: 18pt))[
+      #it
+    ]
   }
 
   body
@@ -63,5 +68,38 @@
   set text(top-edge: 0.7em, bottom-edge: -0.3em)
   set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
 
+  body
+}
+
+#let show_figure(body) = {
+  show heading: i-figured.reset-counters
+  show figure: i-figured.show-figure.with(
+    numbering: "1-1"
+  )
+  show figure: set text(size: 字号.五号)
+
+  show figure.where(
+    kind: table
+  ): set figure.caption(position: top)
+  show figure: set align(center)
+
+  body
+}
+
+#let show_table(body) = {
+  show table: set align(center)
+  show table: block.with(stroke: (y: 1pt))
+  set table(
+    stroke: (x, y) => if y == 0 {
+      (bottom: 0.7pt + black)
+    }
+  )
+  body
+}
+
+#let show_math(body) = {
+  show math.equation: i-figured.show-equation.with(
+    numbering: "(1-1)"
+  )
   body
 }

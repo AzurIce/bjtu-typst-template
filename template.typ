@@ -11,6 +11,7 @@
 #import "pages/abstract_zh.typ": abstract_zh
 #import "pages/abstract_en.typ": abstract_en
 #import "pages/table_of_contents.typ": table_of_contents
+#import "utils/components.typ": header
 
 // #show: show-cn-fakebold
 #let heiti = ("Times New Roman", "SimHei")
@@ -75,17 +76,11 @@
   // 目录
   table_of_contents()
 
-  set page(
-    header: {
-      set text(font: 字体.中宋, size: 字号.四号)
-      [#h(1em)北京交通大学毕业论文（设计）]
-      h(1fr)
-      [正文#h(1em)]
-      place(dy: 5pt)[#line(stroke: 2pt, length: 100%)]
-      place(dy: 8pt)[#line(stroke: 1pt, length: 100%)]
-    }
-  )
+  set page(header: header("正文"))
   show: show_heading
+  show: show_figure
+  show: show_table
+  show: show_math
   set page(numbering: "1")
   counter(page).update(1)
 
