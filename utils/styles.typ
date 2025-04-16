@@ -26,10 +26,11 @@
   }
   // 第一层次（章）题序和标题用三号黑体字；
   show heading.where(level: 1): it => {
-    set align(center)
-    set text(weight: "bold", font: 字体.黑体, size: 字号.三号)
-    set block(spacing: 1.5em)
-    it
+    // set align(center)
+    set text(weight: "regular", font: 字体.黑体, size: 字号.三号)
+    block(inset: (top: 24pt, bottom: 18pt))[
+      #it
+    ]
   }
   // 第二层次（节）题序和标题用小三号黑体字；
   show heading.where(level: 2): it => {
@@ -56,7 +57,11 @@
 #let show_body(body) = {
   // 正文用小四号宋体或楷体字。正文行间距为固定值 20 磅。
   set text(font: 字体.宋体, size: 字号.小四)
-  set par(justify: false, leading: 20pt, first-line-indent: 2em)
+
+  // 用于模仿 word 排版方式
+  // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
+  set text(top-edge: 0.7em, bottom-edge: -0.3em)
+  set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
 
   body
 }

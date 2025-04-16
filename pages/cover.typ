@@ -12,6 +12,8 @@
   author: "姓名",
   id: "2147483647",
   mentor: "指导教师",
+  year: "2025",
+  month: "4",
 ) = {
   show: show-cn-fakebold
   // show text.where(weight: "bold").or(strong): it => {
@@ -33,7 +35,7 @@
     }
     #image(logo_path, alt: "BJTU Logo", width: 10.71cm, height: 2.76cm, fit: "stretch")
 
-    // #v(18pt)
+    #v(18pt)
     #v(14pt)
 
     #text(
@@ -42,10 +44,7 @@
       weight: "bold"
     )[本科毕业论文（设计）]
 
-    #v(22pt)
-    #v(22pt)
-
-    #v(9pt) // 用于与 word 模板对齐...
+    #v(1fr)
 
     #text(
       size: 字号.小二,
@@ -62,9 +61,7 @@
       weight: "bold"
     )[#title_en]
 
-    #v(18pt)
-    #v(18pt)
-    #v(22pt) // 用于与 word 模板对齐...
+    #v(1fr)
 
     #let info_value(body) = {
       rect(
@@ -112,7 +109,7 @@
 
     #v(10.5pt)
     // #v(10.5pt)
-    #v(8pt) // 用于与 word 模板对齐...
+    #v(18pt) // 用于与 word 模板对齐...
 
     #text(
       size: 字号.小三,
@@ -120,12 +117,14 @@
       weight: "bold"
     )[北京交通大学]
 
-    #v(3pt) // 用于与 word 模板对齐...
+    #v(12pt) // 用于与 word 模板对齐...
 
     #text(
       size: 字号.四号,
       font: 字体.宋体,
-    )[2024 年 11 月]
+    )[#year 年 #month 月]
+
+    #v(1fr)
   ]
   pagebreak()
 }
