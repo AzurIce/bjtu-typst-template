@@ -4,7 +4,7 @@
 #import "../utils/variables.typ": *
 #import "../utils/components.typ": page_title, header
 
-#let table_of_contents() = {
+#let outline_page() = {
   show: show-cn-fakebold
 
   show outline.entry.where(level: 1): set text(font: 字体.黑体, size: 字号.小四)
@@ -19,6 +19,6 @@
     indent: 1em
   )
 
-  pagebreak()
+  pagebreak(weak: true)
 }
 

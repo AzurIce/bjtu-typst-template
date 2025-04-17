@@ -1,0 +1,13 @@
+[package]
+name = "bjtu-thesis"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["AzurIce"]
+license = "MIT"
+description = "北京交通大学学位论文 Typst 模板。Beijing Jiao Tong University Tehsis Typst Template."
+repository = "https://github.com/AzurIce/bjtu-typst-template"
+keywords = ["Beijing Jiao Tong University", "BJTU", "thesis"]
+
+[template]
+path = "template"
+entrypoint = "thesis.typ"

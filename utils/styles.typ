@@ -5,6 +5,7 @@
 // Package for Configurable figure and equation numbering per section, see: https://typst.app/universe/package/i-figured
 #import "@preview/i-figured:0.2.4"
 
+#import "components.typ": header
 #import "variables.typ": *
 
 // 参考自 https://github.com/werifu/HUST-typst-template/blob/5261d9202bdd0eefae0f8922b32770f02cf15e4f/utilities/set-heading.typ
@@ -102,4 +103,43 @@
     numbering: "(1-1)"
   )
   body
+}
+
+// 整个文档的样式设置
+#let show_doc(info: (:), it) = {
+  set page(paper: "a4", margin: (
+    top: 3cm,
+    bottom: 2.5cm,
+    left: 2.5cm,
+    right: 2.5cm
+  ))
+  // 正文用小四号宋体或楷体字。正文行间距为固定值 20 磅。
+  set text(font: 字体.宋体, size: 字号.小四)
+
+  // 用于模仿 word 排版方式
+  // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
+  set text(top-edge: 0.7em, bottom-edge: -0.3em)
+  set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
+
+  show: show_figure
+  show: show_table
+  show: show_math
+
+  set document(
+    title: info.title,
+    author: info.author,
+    date: info.date,
+  )
+
+  it
+}
+
+#let show_main(it) = {
+  show: show_heading
+  set page(header: header("正文"))
+
+  set page(numbering: "1")
+  counter(page).update(1)
+
+  it
 }

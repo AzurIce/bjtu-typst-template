@@ -4,7 +4,7 @@
 #import "../utils/variables.typ": *
 #import "../utils/components.typ": page_title, header
 
-#let copyright(anoymous: false) = {
+#let copyright_page(anonymous: false) = {
   show: show-cn-fakebold
 
   set page(header: header("版权使用授权书"))
@@ -49,6 +49,6 @@
     ]
   ]
 
-  pagebreak()
+  pagebreak(weak: true)
 }
 

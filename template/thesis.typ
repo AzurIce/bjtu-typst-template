@@ -1,7 +1,42 @@
-#import "template.typ": project
-// #import "cuti.typ": show-cn-fakebold
+#import "../lib.typ": document
 
-#show: project.with()
+#let (
+  show_doc,
+  show_main,
+  cover_page,
+  copyright_page,
+  integrity_page,
+  abstract_page_zh,
+  abstract_page_en,
+  outline_page,
+) = document(
+
+)
+
+#show: show_doc
+
+#cover_page()
+
+#copyright_page()
+
+#integrity_page()
+
+#set page(numbering: "i")
+#counter(page).update(1)
+
+#abstract_page_zh(keywords: ("3-5个", "关键词", "以分号分隔"))[
+  中文摘要应将论文的内容要点简短明了地表达出来，约400字左右，字体为宋体小四号。内容应包括工作目的、研究方法、成果和结论。要突出本论文的创新点，语言力求精炼。为了便于文献检索，应在本页下方另起一行注明论文的关键词（3-5个），如有可能，尽量采用《汉语主题词表》等词表提供的规范词。图X幅，表X个，参考文献X篇。
+]
+
+#abstract_page_en(
+  keywords: ("Maintain consistency with Chinese keywords", "Maintain consistency with Chinese keywords", "separated by semicolons"),
+)[
+  Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract.
+]
+
+#outline_page()
+
+#show: show_main
 
 = 引言【1级标题，三号黑体字】
 #h(2em)引言（或绪论）简要说明研究工作的目的、范围、相关领域的前人工作和知识空白、理论基础和分析、研究设想、研究方法和实验设计、预期结果和意义等。应言简意赅，不要与摘要雷同，不要成为摘要的注释。一般教科书中有的知识，在引言中不必赘述。
@@ -28,7 +63,7 @@
 图片示例1：
 
 #figure(
-  image("assets/bjtu-black-from-pdf.png"),
+  image("../assets/bjtu-black-from-pdf.png"),
   supplement: "图",
   caption: [北京交通大学]
 )
@@ -69,7 +104,7 @@
   caption: "国际单位制的基本单位",
 )
 
-公式：
+#h(2em)公式：
 
 论文中的公式应另行起，并缩格书写，与周围文字留足够的空间区分开。
 
@@ -110,37 +145,37 @@ $phi.alt$ —— 特征渗透性或固有渗透性，与材料的结构性质有
 由于论文篇幅较长，建议采用文中编号加“脚注”的方式。最好不用采用文中编号加“尾注”。
 
 == 【2级标题，小三号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
 === 【3级标题，四号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
-#pagebreak()
+#pagebreak(weak: true)
 
 = 【1级标题，三号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
 == 【2级标题，小三号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
 === 【3级标题，四号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
-#pagebreak()
+#pagebreak(weak: true)
 
 = 【1级标题，三号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
 == 【2级标题，小三号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
 === 【3级标题，四号黑体字】
-阿巴阿巴阿巴
+#h(2em)阿巴阿巴阿巴
 
-#pagebreak()
+#pagebreak(weak: true)
 
 = 结论【1级标题，三号黑体字】
-论文的结论是最终的、总体的结论，不是正文中各段的小结的简单重复。结论应该准确、完整、明确、精练。如果不可能导出应有的结论，也可以没有结论而进行必要的讨论。可以在结论或讨论中提出建议、研究设想、仪器设备改进意见以及尚待解决的问题等。
+#h(2em)论文的结论是最终的、总体的结论，不是正文中各段的小结的简单重复。结论应该准确、完整、明确、精练。如果不可能导出应有的结论，也可以没有结论而进行必要的讨论。可以在结论或讨论中提出建议、研究设想、仪器设备改进意见以及尚待解决的问题等。
 
-#pagebreak()
+#pagebreak(weak: true)
 

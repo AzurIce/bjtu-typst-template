@@ -4,7 +4,7 @@
 #import "../utils/variables.typ": *
 #import "../utils/components.typ": page_title, header
 
-#let integrity(anoymous: false) = {
+#let integrity_page(anonymous: false) = {
   show: show-cn-fakebold
 
   set page(header: header("论文诚信声明"))

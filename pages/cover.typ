@@ -3,17 +3,19 @@
 
 #import "../utils/variables.typ": *
 
-#let cover(
+// 封面
+#let cover_page(
   anonymous: false,
-  title_zh: "论文（设计）题目",
-  title_en: "论文（设计）英文题目",
-  school: "软件学院",
-  major: "软件工程",
-  author: "姓名",
-  id: "2147483647",
-  mentor: "指导教师",
-  year: "2025",
-  month: "4",
+  info: (:),
+  // title_zh: "论文（设计）题目",
+  // title_en: "论文（设计）英文题目",
+  // school: "软件学院",
+  // major: "软件工程",
+  // author: "姓名",
+  // id: "2147483647",
+  // mentor: "指导教师",
+  // year: "2025",
+  // month: "4",
 ) = {
   show: show-cn-fakebold
   // show text.where(weight: "bold").or(strong): it => {
@@ -50,7 +52,7 @@
       size: 字号.小二,
       font: 字体.黑体,
       weight: "bold"
-    )[#title_zh]
+    )[#info.title]
 
     #v(18pt)
     #v(10pt) // 用于与 word 模板对齐...
@@ -59,7 +61,7 @@
       size: 字号.小二,
       font: 字体.宋体,
       weight: "bold"
-    )[#title_en]
+    )[#info.title_en]
 
     #v(1fr)
 
@@ -96,15 +98,15 @@
       rows: (28pt, 28pt),
       gutter: 3pt,
       info_key("学　　院"),
-      info_value(if not anonymous { school } else { "██████████" }),
+      info_value(if not anonymous { info.school } else { "██████████" }),
       info_key("专　　业"),
-      info_value(if not anonymous { major } else { "██████████" }),
+      info_value(if not anonymous { info.major } else { "██████████" }),
       info_key("学生姓名"),
-      info_value(if not anonymous { author } else { "██████████" }),
+      info_value(if not anonymous { info.author } else { "██████████" }),
       info_key("学　　号"),
-      info_value(if not anonymous { id } else { "██████████" }),
+      info_value(if not anonymous { info.id } else { "██████████" }),
       info_key("指导教师"),
-      info_value(if not anonymous { mentor } else { "██████████" }),
+      info_value(if not anonymous { info.mentor } else { "██████████" }),
     )
 
     #v(10.5pt)
@@ -122,9 +124,12 @@
     #text(
       size: 字号.四号,
       font: 字体.宋体,
-    )[#year 年 #month 月]
+    )[#info.date.year() 年 #info.date.month() 月]
 
     #v(1fr)
   ]
-  pagebreak()
+
+  pagebreak(weak: true, to: "odd")
+  // 翻面
+  // pagebreak()
 }

@@ -13,3 +13,4 @@ WIP
 
 - https://github.com/werifu/HUST-typst-template
 - https://github.com/pku-typst/pkuthss-typst
+- https://github.com/tzhTaylor/modern-sjtu-thesis

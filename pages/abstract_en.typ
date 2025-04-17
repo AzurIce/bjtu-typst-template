@@ -4,9 +4,9 @@
 #import "../utils/variables.typ": *
 #import "../utils/components.typ": page_title, header
 
-#let abstract_en(
-  abstract: "Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract.",
-  keywords: ("Maintain consistency with Chinese keywords", "Maintain consistency with Chinese keywords", "separated by semicolons"),
+#let abstract_page_en(
+  keywords: (),
+  body,
 ) = {
   show: show-cn-fakebold
 
@@ -15,7 +15,7 @@
   page_title("ABSTRACT", use_heading: true)
   
   text(weight: "bold")[ABSTRACT: ]
-  text[#abstract]
+  text[#body]
   
   linebreak()
   linebreak()
@@ -27,6 +27,6 @@
   text[#keywords]
   text[;]
 
-  pagebreak()
+  pagebreak(weak: true)
 }
 
