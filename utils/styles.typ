@@ -107,6 +107,12 @@
 
 // 整个文档的样式设置
 #let show_doc(info: (:), it) = {
+  // show text.where(weight: "bold").or(strong): it => {
+  //   show regex("\p{script=Han}"): set text(stroke: 0.02857em)
+  //   it
+  // }
+  show: show-cn-fakebold
+
   set page(paper: "a4", margin: (
     top: 3cm,
     bottom: 2.5cm,
@@ -124,6 +130,8 @@
   show: show_figure
   show: show_table
   show: show_math
+
+  show bibliography: set text(font: 字体.宋体, size: 字号.五号)
 
   set document(
     title: info.title,

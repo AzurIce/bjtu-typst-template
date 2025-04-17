@@ -9,6 +9,8 @@
   abstract_page_zh,
   abstract_page_en,
   outline_page,
+  bib_page,
+  aknowledgement_page,
 ) = document(
 
 )
@@ -177,5 +179,13 @@ $phi.alt$ —— 特征渗透性或固有渗透性，与材料的结构性质有
 = 结论【1级标题，三号黑体字】
 #h(2em)论文的结论是最终的、总体的结论，不是正文中各段的小结的简单重复。结论应该准确、完整、明确、精练。如果不可能导出应有的结论，也可以没有结论而进行必要的讨论。可以在结论或讨论中提出建议、研究设想、仪器设备改进意见以及尚待解决的问题等。
 
+引用文献 @sanderson_3b1bmanim_2025，引用文献一堆
+@park_shader-based_2021 @sanderson_3b1bmanim_2025 @gustavson_anti-aliased_2011 @li_efficient_2016，没了。
+
 #pagebreak(weak: true)
 
+#bib_page(bibfunc: bibliography.with("bibliography.bib"))
+
+#aknowledgement_page[
+  #h(2em)放置在参考文献页后，对象包括：1）国家科学基金，资助研究工作的奖学金基金，合同单位，资助或支持的企业、组织或个人。2）协助完成研究工作和提供便利条件的组织或个人。3）在研究工作中提出建议和提供帮助的人。4）给予转载和引用权的资料、图片、文献、研究思想和设想的所有者。5）其他应感谢的组织和个人。
+]

@@ -5,6 +5,8 @@
 #import "pages/abstract_zh.typ": abstract_page_zh
 #import "pages/abstract_en.typ": abstract_page_en
 #import "pages/outline.typ": outline_page
+#import "pages/bib.typ": bib_page
+#import "pages/aknowledgement.typ": aknowledgement_page
 
 #let document(
   anonymous: false,
@@ -62,6 +64,12 @@
     },
     outline_page: (..args) => {
       outline_page(..args)
+    },
+    bib_page: (..args) => {
+      bib_page(..args)
+    },
+    aknowledgement_page: (..args) => {
+      aknowledgement_page(..args)
     }
   )
 }

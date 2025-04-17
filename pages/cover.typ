@@ -1,6 +1,3 @@
-// Package for showing Chinese fake bold, see: https://typst.app/universe/package/cuti/
-#import "@preview/cuti:0.3.0": show-cn-fakebold
-
 #import "../utils/variables.typ": *
 
 // 封面
@@ -17,12 +14,6 @@
   // year: "2025",
   // month: "4",
 ) = {
-  show: show-cn-fakebold
-  // show text.where(weight: "bold").or(strong): it => {
-  //   show regex("\p{script=Han}"): set text(stroke: 0.02857em)
-  //   it
-  // }
-
   align(center)[
     // bjtu logo
     #v(10.5pt)
@@ -130,6 +121,4 @@
   ]
 
   pagebreak(weak: true, to: "odd")
-  // 翻面
-  // pagebreak()
 }
