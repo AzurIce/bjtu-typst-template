@@ -11,3 +11,4 @@ keywords = ["Beijing Jiao Tong University", "BJTU", "thesis"]
 [template]
 path = "template"
 entrypoint = "thesis.typ"
+thumbnail = "thumbnail.png"
