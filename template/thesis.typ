@@ -67,10 +67,18 @@
 #figure(
   image("../assets/bjtu-black-from-pdf.png"),
   supplement: "图",
+  kind: "image",
   caption: [北京交通大学]
 )<bjtu>
 
-如 @img:bjtu 所示，......。
+#figure(
+  image("../assets/bjtu-black-from-pdf.png"),
+  supplement: "图",
+  kind: "image",
+  caption: [还是北京交通大学]
+)<bjbjtu>
+
+如 @img:bjtu, @img:bjbjtu 所示，......。
 
 #h(2em)表：
 

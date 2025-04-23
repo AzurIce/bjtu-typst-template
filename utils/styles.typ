@@ -56,6 +56,7 @@
       #it
     ]
   }
+  show heading: i-figured.reset-counters.with(extra-kinds: ("image",))
 
   body
 }
@@ -73,7 +74,6 @@
 }
 
 #let show_figure(body) = {
-  show heading: i-figured.reset-counters
   show figure: i-figured.show-figure.with(
     extra-prefixes: (image: "img:"),
     numbering: "1-1"
