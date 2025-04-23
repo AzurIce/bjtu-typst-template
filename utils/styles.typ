@@ -75,6 +75,7 @@
 #let show_figure(body) = {
   show heading: i-figured.reset-counters
   show figure: i-figured.show-figure.with(
+    extra-prefixes: (image: "img:"),
     numbering: "1-1"
   )
   show figure: set text(size: 字号.五号)
@@ -99,6 +100,7 @@
 }
 
 #let show_math(body) = {
+  set math.equation(supplement: [公式])
   show math.equation: i-figured.show-equation.with(
     numbering: "(1-1)"
   )

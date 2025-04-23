@@ -68,7 +68,9 @@
   image("../assets/bjtu-black-from-pdf.png"),
   supplement: "图",
   caption: [北京交通大学]
-)
+)<bjtu>
+
+如 @img:bjtu 所示，......。
 
 #h(2em)表：
 
@@ -104,7 +106,9 @@
   ),
   supplement: "表",
   caption: "国际单位制的基本单位",
-)
+)<units>
+
+如表 @tbl:units 所示，......。
 
 #h(2em)公式：
 
@@ -114,9 +118,11 @@
 
 公式示例1：
 
-$ phi.alt = D^2_p / 150 psi^3 / (1-psi)^2 $
+$ phi.alt = D^2_p / 150 psi^3 / (1-psi)^2 $<eq-a>
 
-$ C_2 = 3.5 / D_p ((1-psi)) / psi^3 $
+$ C_2 = 3.5 / D_p ((1-psi)) / psi^3 $<eq-b>
+
+#h(2em) 引用两个公式，@eqt:eq-a @eqt:eq-b，......。
 
 式中 $D_p$ —— 多孔质材料的平均粒子直径($m$)；
 
