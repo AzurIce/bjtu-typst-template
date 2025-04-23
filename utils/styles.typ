@@ -31,28 +31,28 @@
   show heading.where(level: 1): it => {
     // set align(center)
     set text(weight: "regular", font: 字体.黑体, size: 字号.三号)
-    block(inset: (top: 24pt, bottom: 18pt))[
+    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
       #it
     ]
   }
   // 第二层次（节）题序和标题用小三号黑体字；
   show heading.where(level: 2): it => {
     set text(weight: "regular", font: 字体.黑体, size: 字号.小三)
-    block(inset: (top: 24pt, bottom: 18pt))[
+    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
       #it
     ]
   }
   // 第三层次（条）题序和标题用四号黑体字；
   show heading.where(level: 3): it => {
     set text(weight: "regular", font: 字体.黑体, size: 字号.四号)
-    block(inset: (top: 24pt, bottom: 18pt))[
+    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
       #it
     ]
   }
   // 第四及以下层次（款）题序和标题用小四号黑体字；
   show heading.where(level: 4): it => {
     set text(weight: "regular", font: 字体.黑体, size: 字号.小四)
-    block(inset: (top: 24pt, bottom: 18pt))[
+    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
       #it
     ]
   }
