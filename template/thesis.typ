@@ -1,4 +1,4 @@
-#import "../lib.typ": document
+#import "../lib.typ": document, tri-table
 
 #let (
   show_doc,
@@ -116,7 +116,25 @@
   caption: "国际单位制的基本单位",
 )<units>
 
-如表 @tbl:units 所示，......。
+#figure(
+  tri-table(
+    columns: 3,
+    table.header(
+      [量的名称], [单位名称], [单位符号]
+    ),
+    [长度], [米], [m],
+    [质量], [千克(公斤)], [kg],
+    [时间], [秒], [s],
+    [电流], [安[培]], [A],
+    [热力学温度], [开[尔文]], [K],
+    [物质的量], [摩[尔]], [mol],
+    [发光强度], [坎[德拉]], [cd]
+  ),
+  supplement: "表",
+  caption: "国际单位制的基本单位三线表",
+)<units-tri>
+
+如表 @tbl:units @tbl:units-tri 所示，......。
 
 #h(2em)公式：
 

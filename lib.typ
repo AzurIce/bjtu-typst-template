@@ -8,6 +8,10 @@
 #import "pages/bib.typ": bib_page
 #import "pages/aknowledgement.typ": aknowledgement_page
 
+#let tri-table = table.with(stroke: (x, y) => if y == 0 {
+  (bottom: 0.7pt + black)
+})
+
 #let document(
   anonymous: false,
   info: (:),

@@ -91,11 +91,6 @@
 #let show_table(body) = {
   show table: set align(center)
   show table: block.with(stroke: (y: 1pt))
-  set table(
-    stroke: (x, y) => if y == 0 {
-      (bottom: 0.7pt + black)
-    }
-  )
   body
 }
 
