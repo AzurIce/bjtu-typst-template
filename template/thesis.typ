@@ -1,4 +1,4 @@
-#import "../lib.typ": document, tri-table
+#import "../lib.typ": document, tables
 
 #let (
   show_doc,
@@ -66,14 +66,12 @@
 
 #figure(
   image("../assets/bjtu-black-from-pdf.png"),
-  supplement: "图",
   kind: "image",
   caption: [北京交通大学]
 )<bjtu>
 
 #figure(
   image("../assets/bjtu-black-from-pdf.png"),
-  supplement: "图",
   kind: "image",
   caption: [还是北京交通大学]
 )<bjbjtu>
@@ -112,12 +110,11 @@
     [物质的量], [摩[尔]], [mol],
     [发光强度], [坎[德拉]], [cd]
   ),
-  supplement: "表",
   caption: "国际单位制的基本单位",
 )<units>
 
 #figure(
-  tri-table(
+  tables.tri_table(
     columns: 3,
     table.header(
       [量的名称], [单位名称], [单位符号]
@@ -130,11 +127,47 @@
     [物质的量], [摩[尔]], [mol],
     [发光强度], [坎[德拉]], [cd]
   ),
-  supplement: "表",
   caption: "国际单位制的基本单位三线表",
 )<units-tri>
 
-如表 @tbl:units @tbl:units-tri 所示，......。
+#figure(
+  tables.use_case_table(
+    columns: 4,
+    table.header(
+      [*用例编号*], [UC1], [*用例名称*], [动画渲染],
+    ),
+    fill: (x, y) => if y == 0 {
+      blue.lighten(70%)
+    },
+    stroke: (x, y) => {
+      (
+        top: 0.7pt + black,
+        left: if (x != 0) {
+          0.7pt + black
+        }
+      )
+    },
+    [*活动者*], [引擎用户], [*优先级*], [高],
+    [*描述*], table.cell(colspan:3)[用户通过引擎提供的 API 接口调用渲染模块，请求渲染动画],
+    [*前置条件*], table.cell(colspan:3)[无],
+    [*后置条件*], table.cell(colspan:3)[引擎成功渲染出动画],
+    [*主事件流*], table.cell(colspan:3)[
+      #set align(left)
+      1. 引擎用户调用引擎提供的接口渲染动画时间线；
+      2. 引擎对时间线进行求值，通过实例资源池准备渲染实例；
+      3. 引擎将渲染实例编码为 GPU 指令并提交；
+      4. 引擎得到渲染结果；
+      5. 将渲染结果编码入输出视频文件
+      6. 重复 2-5 步直至完成整个动画时间线渲染。
+    ],
+    [*备选事件流*], table.cell(colspan:3)[无],
+    [*异常事件流*], table.cell(colspan:3)[无],
+    [*其他说明*], table.cell(colspan:3)[无],
+  ),
+  caption: "渲染动画用例说明",
+)<use-case>
+
+如表 @tbl:units @tbl:units-tri @tbl:use-case 所示，......。
 
 #h(2em)公式：
 
