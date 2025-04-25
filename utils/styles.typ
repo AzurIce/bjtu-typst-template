@@ -90,6 +90,11 @@
     kind: "image"
   ): set figure(supplement: "图")
   show figure: set align(center)
+  show figure: (it) => {
+    v(0.5em)
+    it
+    v(0.5em)
+  }
 
   body
 }
@@ -97,6 +102,7 @@
 #let show_table(body) = {
   show table: set align(center)
   show table: block.with(stroke: (y: 1pt))
+  show table: set par(leading: 0.5em)
   body
 }
 

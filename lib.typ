@@ -8,6 +8,7 @@
 #import "pages/bib.typ": bib_page
 #import "pages/aknowledgement.typ": aknowledgement_page
 
+#import "utils/variables.typ"
 #import "tables.typ"
 
 #let document(
