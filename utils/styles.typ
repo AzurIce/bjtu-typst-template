@@ -61,17 +61,17 @@
   body
 }
 
-#let show_body(body) = {
-  // 正文用小四号宋体或楷体字。正文行间距为固定值 20 磅。
-  set text(font: 字体.宋体, size: 字号.小四)
+// #let show_body(body) = {
+//   // 正文用小四号宋体或楷体字。正文行间距为固定值 20 磅。
+//   set text(font: 字体.宋体, size: 字号.小四)
 
-  // 用于模仿 word 排版方式
-  // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
-  set text(top-edge: 0.7em, bottom-edge: -0.3em)
-  set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
+//   // 用于模仿 word 排版方式
+//   // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
+//   set text(top-edge: 0.7em, bottom-edge: -0.3em)
+//   set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
 
-  body
-}
+//   body
+// }
 
 #let show_figure(body) = {
   show figure: i-figured.show-figure.with(
@@ -128,7 +128,7 @@
   // 用于模仿 word 排版方式
   // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
   set text(top-edge: 0.7em, bottom-edge: -0.3em)
-  set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
+  set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em, justify: true)
 
   show: show_figure
   show: show_table
