@@ -24,38 +24,19 @@
       }
       it.body
     } else {
-        ""
+      ""
     }
   }
+  show heading: it => block(it)
+  show heading: set block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)
   // 第一层次（章）题序和标题用三号黑体字；
-  show heading.where(level: 1): it => {
-    // set align(center)
-    set text(weight: "regular", font: 字体.黑体, size: 字号.三号)
-    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
-      #it
-    ]
-  }
+  show heading.where(level: 1): set text(weight: "regular", font: 字体.黑体, size: 字号.三号)
   // 第二层次（节）题序和标题用小三号黑体字；
-  show heading.where(level: 2): it => {
-    set text(weight: "regular", font: 字体.黑体, size: 字号.小三)
-    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
-      #it
-    ]
-  }
+  show heading.where(level: 2): set text(weight: "regular", font: 字体.黑体, size: 字号.小三)
   // 第三层次（条）题序和标题用四号黑体字；
-  show heading.where(level: 3): it => {
-    set text(weight: "regular", font: 字体.黑体, size: 字号.四号)
-    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
-      #it
-    ]
-  }
+  show heading.where(level: 3): set text(weight: "regular", font: 字体.黑体, size: 字号.四号)
   // 第四及以下层次（款）题序和标题用小四号黑体字；
-  show heading.where(level: 4): it => {
-    set text(weight: "regular", font: 字体.黑体, size: 字号.小四)
-    block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)[
-      #it
-    ]
-  }
+  show heading.where(level: 4): set text(weight: "regular", font: 字体.黑体, size: 字号.小四)
   show heading: i-figured.reset-counters.with(extra-kinds: ("image",))
 
   body
@@ -116,6 +97,15 @@
 
 // 整个文档的样式设置
 #let show_doc(info: (:), it) = {
+  show par: (it) => {
+    if info.debug {
+      set block(fill: blue)
+      block(it)
+    } else {
+      it
+    }
+  }
+  show block: set block(stroke: red) if info.debug
   // show text.where(weight: "bold").or(strong): it => {
   //   show regex("\p{script=Han}"): set text(stroke: 0.02857em)
   //   it

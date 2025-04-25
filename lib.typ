@@ -17,6 +17,7 @@
 ) = {
   info = (
     (
+      debug: false,
       date: datetime.today(),
       title: "论文（设计）题目",
       title_en: "论文（设计）英文题目",
