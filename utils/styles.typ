@@ -55,10 +55,21 @@
 // }
 
 #let show_figure(body) = {
-  show figure: i-figured.show-figure.with(
+  show figure.where(kind: "image"): i-figured.show-figure.with(
     extra-prefixes: (image: "img:"),
     numbering: "1-1"
   )
+  show figure.where(kind: table): i-figured.show-figure.with(numbering: "1-1")
+
+  show figure.where(kind: "image"): (it) => {
+    counter(figure.where(kind: "subimage")).update(0)
+    it
+  }
+  show figure.where(kind: "subimage"): set figure(numbering: "(a)", supplement: "")
+  show figure.where(
+    kind: "subimage"
+  ): set figure.caption(separator: "")
+
   show figure: set text(size: 字号.五号)
 
   show figure.where(
@@ -72,9 +83,10 @@
   ): set figure(supplement: "图")
   show figure: set align(center)
   show figure: (it) => {
-    v(0.5em)
-    it
-    v(0.5em)
+    block(it, above: 1.5em, below: 1.5em)
+    // v(0.5em)
+    // it
+    // v(0.5em)
   }
 
   body
