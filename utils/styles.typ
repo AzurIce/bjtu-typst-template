@@ -75,6 +75,7 @@
   show figure.where(
     kind: table
   ): set figure.caption(position: top)
+  show figure.caption: set par(spacing: 0.5em)
   show figure.where(
     kind: table
   ): set figure(supplement: "表")
