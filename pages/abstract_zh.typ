@@ -9,7 +9,7 @@
 
   page_title("中文摘要", use_heading: true)
   
-  text(weight: "bold")[摘要：]
+  // text(weight: "bold")[摘要：]
   text[#body]
   
   linebreak()
