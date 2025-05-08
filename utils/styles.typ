@@ -28,7 +28,7 @@
     }
   }
   show heading: it => block(it)
-  show heading: set block(inset: (top: 24pt, bottom: 18pt), spacing: 20pt-1em)
+  show heading: set block(above: 24pt, below: 18pt)
   // 第一层次（章）题序和标题用三号黑体字；
   show heading.where(level: 1): set text(weight: "regular", font: 字体.黑体, size: 字号.三号)
   // 第二层次（节）题序和标题用小三号黑体字；
@@ -41,18 +41,6 @@
 
   body
 }
-
-// #let show_body(body) = {
-//   // 正文用小四号宋体或楷体字。正文行间距为固定值 20 磅。
-//   set text(font: 字体.宋体, size: 字号.小四)
-
-//   // 用于模仿 word 排版方式
-//   // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
-//   set text(top-edge: 0.7em, bottom-edge: -0.3em)
-//   set par(spacing: 20pt-1em, leading: 20pt-1em, first-line-indent: 2em)
-
-//   body
-// }
 
 #let show_figure(body) = {
   show figure.where(kind: "image"): i-figured.show-figure.with(
@@ -125,12 +113,22 @@
   // }
   show: show-cn-fakebold
 
-  set page(paper: "a4", margin: (
-    top: 3cm,
-    bottom: 2.5cm,
-    left: 2.5cm,
-    right: 2.5cm
-  ))
+  set page(
+    paper: "a4",
+    margin: (
+      top: 3cm,
+      bottom: 2.5cm,
+      left: 2.5cm,
+      right: 2.5cm
+    ),
+    header-ascent: 3cm-1.5cm-20pt,
+    footer-descent: 2.5cm-1.75cm-10pt,
+    footer: context [
+      #set align(center)
+      #set text(size: 字号.五号)
+      #counter(page).display()
+    ]
+  )
   // 正文用小四号宋体或楷体字。正文行间距为固定值 20 磅。
   set text(font: 字体.宋体, size: 字号.小四)
 

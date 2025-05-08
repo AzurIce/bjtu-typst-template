@@ -8,8 +8,8 @@
   [#h(1em)北京交通大学毕业论文（设计）]
   h(1fr)
   [#title#h(1em)]
-  place(dy: 6pt)[#line(stroke: 3pt, length: 100%)]
-  place(dy: 9pt)[#line(stroke: 1pt, length: 100%)]
+  place(dy: 2.5pt)[#line(stroke: 2.5pt, length: 100%)]
+  place(dy: 5pt)[#line(stroke: 1pt, length: 100%)]
 }
 
 // 用于 “学士论文版权使用授权书”、“学士论文诚信声明”等页标题
