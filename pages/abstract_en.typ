@@ -10,7 +10,6 @@
   page_title("ABSTRACT", use_heading: true)
   
   text(weight: "bold")[ABSTRACT:]
-  linebreak()
   text[#body]
   
   linebreak()
