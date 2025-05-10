@@ -43,6 +43,11 @@
 }
 
 #let show_figure(body) = {
+  show figure.where(kind: "algorithm"): i-figured.show-figure.with(
+    extra-prefixes: (algorithm: "alg:"),
+    numbering: "1-1"
+  )
+  show figure.where(kind: "algorithm"): set figure(supplement: "程序")
   show figure.where(kind: "image"): i-figured.show-figure.with(
     extra-prefixes: (image: "img:"),
     numbering: "1-1"
