@@ -7,6 +7,7 @@
 #import "pages/outline.typ": outline_page
 #import "pages/bib.typ": bib_page
 #import "pages/aknowledgement.typ": aknowledgement_page
+#import "pages/appendix.typ": appendix_page
 
 #import "utils/variables.typ"
 #import "tables.typ"
@@ -74,6 +75,9 @@
     },
     aknowledgement_page: (..args) => {
       aknowledgement_page(..args)
+    },
+    appendix_page: (..args) => {
+      appendix_page(..args)
     }
   )
 }
