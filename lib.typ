@@ -1,4 +1,4 @@
-#import "utils/styles.typ": show_doc, show_main
+#import "utils/styles.typ": show_doc, show_main, show_appendix
 #import "pages/cover.typ": cover_page
 #import "pages/copyright.typ": copyright_page
 #import "pages/integrity.typ": integrity_page
@@ -7,7 +7,6 @@
 #import "pages/outline.typ": outline_page
 #import "pages/bib.typ": bib_page
 #import "pages/aknowledgement.typ": aknowledgement_page
-#import "pages/appendix.typ": appendix_page
 
 #import "utils/variables.typ"
 #import "tables.typ"
@@ -76,8 +75,8 @@
     aknowledgement_page: (..args) => {
       aknowledgement_page(..args)
     },
-    appendix_page: (..args) => {
-      appendix_page(..args)
+    show_appendix: (..args) => {
+      show_appendix(..args)
     }
   )
 }

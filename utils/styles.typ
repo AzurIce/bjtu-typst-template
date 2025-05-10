@@ -166,3 +166,14 @@
 
   it
 }
+
+#let show_appendix(it) = {
+  set page(header: header("附录"))
+
+  counter(heading).update(0)
+  set heading(supplement: "附录")
+  show heading.where(level: 1): set heading(numbering: "附录A")
+  show heading.where(level: 2): set heading(numbering: "A.1")
+
+  it
+}
