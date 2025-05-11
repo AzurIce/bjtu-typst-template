@@ -22,7 +22,7 @@
 
     #v(18pt) // 这个数值用于与 word 模板里的 logo对齐...
 
-    #let logo_path = if not anonymous {
+    #let logo_path = if not anonymous or true {
       "../assets/bjtu-black-from-pdf.png"
     } else {
       "../assets/bjtu-anonymous.png"
