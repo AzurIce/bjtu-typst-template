@@ -175,5 +175,11 @@
   show heading.where(level: 1): set heading(numbering: "附录A")
   show heading.where(level: 2): set heading(numbering: "A.1")
 
+  show raw: it => {
+    set par(leading: 0em)
+    set raw(tab-size: 2)
+    it
+  }
+
   it
 }
