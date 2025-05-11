@@ -2,7 +2,7 @@
 #import "../utils/components.typ": page_title, header
 
 #let copyright_page(anonymous: false) = {
-  set page(header: header("版权使用授权书"))
+  set page(header: header("版权使用授权书"), footer: none)
 
   page_title("学士论文版权使用授权书")
   

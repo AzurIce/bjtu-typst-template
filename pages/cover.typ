@@ -14,6 +14,7 @@
   // year: "2025",
   // month: "4",
 ) = {
+  set page(footer: none)
   align(center)[
     // bjtu logo
     #v(10.5pt)

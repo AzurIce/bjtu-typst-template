@@ -2,7 +2,7 @@
 #import "../utils/components.typ": page_title, header
 
 #let integrity_page(anonymous: false) = {
-  set page(header: header("论文诚信声明"))
+  set page(header: header("论文诚信声明"), footer: none)
 
   page_title("学士论文诚信声明")
   
