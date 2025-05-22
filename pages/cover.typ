@@ -44,7 +44,10 @@
       size: 字号.小二,
       font: 字体.黑体,
       weight: "bold"
-    )[#info.title]
+    )[
+      #set par(justify: false)
+      #info.title
+    ]
 
     #v(18pt)
     #v(10pt) // 用于与 word 模板对齐...
@@ -53,7 +56,10 @@
       size: 字号.小二,
       font: 字体.宋体,
       weight: "bold"
-    )[#info.title_en]
+    )[
+      #set par(justify: false)
+      #info.title_en
+    ]
 
     #v(1fr)
 
