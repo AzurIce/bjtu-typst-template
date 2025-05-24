@@ -175,11 +175,10 @@
   show heading.where(level: 1): set heading(numbering: "附录A")
   show heading.where(level: 2): set heading(numbering: "A.1")
 
-  show raw: it => {
-    set par(leading: 0em)
-    set raw(tab-size: 2)
-    it
-  }
+  show regex("[\u4e00-\u9fa5]"): set text(font: "Sarasa Mono SC")
+  // show raw: set text(font: 字体.楷体, size: 字号.小四)
+  show raw: set text(top-edge: "cap-height", bottom-edge: "baseline")
+  show raw: set par(leading: 1em, spacing: 1em, justify: false)
 
   it
 }
