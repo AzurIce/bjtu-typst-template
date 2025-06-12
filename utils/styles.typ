@@ -157,9 +157,9 @@
   it
 }
 
-#let show_main(it) = {
+#let show_main(it, anonymous: false) = {
   show: show_heading
-  set page(header: header("正文"))
+  set page(header: header("正文", anonymous: anonymous))
 
   set page(numbering: "1")
   counter(page).update(1)
@@ -167,8 +167,8 @@
   it
 }
 
-#let show_appendix(it) = {
-  set page(header: header("附录"))
+#let show_appendix(it, anonymous: false) = {
+  set page(header: header("附录", anonymous: anonymous))
 
   counter(heading).update(0)
   set heading(supplement: "附录")

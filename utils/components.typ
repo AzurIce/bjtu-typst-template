@@ -3,9 +3,26 @@
 
 #import "variables.typ": *
 
-#let header(title) = {
+#let anonymous_header(title) = {
   set text(font: 字体.中宋, size: 字号.四号)
-  [#h(1em)北京交通大学毕业论文（设计）]
+  h(1fr)
+  [#title#h(1em)]
+  place(dy: 2.5pt)[#line(stroke: 2.5pt, length: 100%)]
+  place(dy: 5pt)[#line(stroke: 1pt, length: 100%)]
+}
+
+#let header(title, anonymous: false) = {
+  set text(font: 字体.中宋, size: 字号.四号)
+  [
+    #if anonymous {
+      h(1em)
+      [██████████]
+    } else {
+      h(1em)
+      [北京交通大学]
+    }
+    毕业论文（设计）
+  ]
   h(1fr)
   [#title#h(1em)]
   place(dy: 2.5pt)[#line(stroke: 2.5pt, length: 100%)]

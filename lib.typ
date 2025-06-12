@@ -26,26 +26,34 @@
       author: "姓名",
       id: "114514",
       mentor: "指导教师",
-    ) + info
+    )
+      + info
   )
 
   (
     show_doc: (..args) => {
       show_doc(
         ..args,
-        info: info + args.named().at("info", default: (:))
+        info: info + args.named().at("info", default: (:)),
       )
     },
     show_main: (..args) => {
       show_main(
         ..args,
+        anonymous: anonymous,
+      )
+    },
+    show_appendix: (..args) => {
+      show_appendix(
+        ..args,
+        anonymous: anonymous,
       )
     },
     cover_page: (..args) => {
       cover_page(
         ..args,
         anonymous: anonymous,
-        info: info + args.named().at("info", default: (:))
+        info: info + args.named().at("info", default: (:)),
       )
     },
     copyright_page: (..args) => {
@@ -61,22 +69,34 @@
       )
     },
     abstract_page_zh: (..args) => {
-      abstract_page_zh(..args)
+      abstract_page_zh(
+        ..args,
+        anonymous: anonymous,
+      )
     },
     abstract_page_en: (..args) => {
-      abstract_page_en(..args)
+      abstract_page_en(
+        ..args,
+        anonymous: anonymous,
+      )
     },
     outline_page: (..args) => {
-      outline_page(..args)
+      outline_page(
+        ..args,
+        anonymous: anonymous,
+      )
     },
     bib_page: (..args) => {
-      bib_page(..args)
+      bib_page(
+        ..args,
+        anonymous: anonymous,
+      )
     },
     aknowledgement_page: (..args) => {
-      aknowledgement_page(..args)
+      aknowledgement_page(
+        ..args,
+        anonymous: anonymous,
+      )
     },
-    show_appendix: (..args) => {
-      show_appendix(..args)
-    }
   )
 }

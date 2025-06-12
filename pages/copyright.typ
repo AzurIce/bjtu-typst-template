@@ -2,12 +2,16 @@
 #import "../utils/components.typ": page_title, header
 
 #let copyright_page(anonymous: false) = {
-  set page(header: header("版权使用授权书"), footer: none)
+  set page(header: header("版权使用授权书", anonymous: anonymous), footer: none)
 
   page_title("学士论文版权使用授权书")
-  
+
   text[
-    #h(2em)本学士论文作者完全了解北京交通大学有关保留、使用学士论文的规定。特授权北京交通大学可以将学士论文的全部或部分内容编入有关数据库进行检索，提供阅览服务，并采用影印、缩印或扫描等复制手段保存、汇编以供查阅和借阅。
+    #h(2em)本学士论文作者完全了解#if anonymous { [██████████] } else {
+      [北京交通大学]
+    }有关保留、使用学士论文的规定。特授权#if anonymous { [██████████] } else {
+      [北京交通大学]
+    }可以将学士论文的全部或部分内容编入有关数据库进行检索，提供阅览服务，并采用影印、缩印或扫描等复制手段保存、汇编以供查阅和借阅。
 
     #linebreak()
 
@@ -21,7 +25,7 @@
     #linebreak()
     #linebreak()
   ]
-  
+
   columns(2)[
     #text[
       #h(2em)学位论文作者签名：

@@ -22,7 +22,7 @@
 
     #v(18pt) // 这个数值用于与 word 模板里的 logo对齐...
 
-    #let logo_path = if not anonymous or true {
+    #let logo_path = if not anonymous {
       "../assets/bjtu-black-from-pdf.png"
     } else {
       "../assets/bjtu-anonymous.png"
@@ -115,7 +115,7 @@
       size: 字号.小三,
       font: 字体.宋体,
       weight: "bold"
-    )[北京交通大学]
+    )[#if not anonymous { "北京交通大学" } else { "██████████" }]
 
     #v(12pt) // 用于与 word 模板对齐...
 
