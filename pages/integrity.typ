@@ -29,6 +29,6 @@
     ]
   ]
 
-  pagebreak()
+  pagebreak(weak: true, to: "odd")
 }
 
