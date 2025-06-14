@@ -10,7 +10,8 @@
 
   set page(header: header("参考文献", anonymous: anonymous))
 
-  page_title("参考文献")
+  set heading(numbering: none)
+  page_title(use_heading: true)[参考文献]
 
   bibfunc(
     title: none,

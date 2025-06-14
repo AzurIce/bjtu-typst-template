@@ -13,16 +13,13 @@
 
 #let header(title, anonymous: false) = {
   set text(font: 字体.中宋, size: 字号.四号)
-  [
-    #if anonymous {
-      h(1em)
-      [██████████]
-    } else {
-      h(1em)
-      [北京交通大学]
-    }
-    毕业论文（设计）
-  ]
+  let school = if anonymous {
+    "██████████"
+  } else {
+    "北京交通大学"
+  }
+
+  [#h(1em)#text(school)毕业设计（论文）]
   h(1fr)
   [#title#h(1em)]
   place(dy: 2.5pt)[#line(stroke: 2.5pt, length: 100%)]

@@ -65,6 +65,7 @@
     integrity_page: (..args) => {
       integrity_page(
         ..args,
+        title: info.title,
         anonymous: anonymous,
       )
     },
