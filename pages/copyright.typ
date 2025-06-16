@@ -48,6 +48,7 @@
     ]
   ]
 
+  set page(header: none)
   pagebreak(weak: true, to: "odd")
 }
 
