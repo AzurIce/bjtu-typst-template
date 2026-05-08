@@ -1,5 +1,5 @@
 #import "../utils/variables.typ": *
-#import "../utils/components.typ": page_title, header
+#import "../utils/components.typ": header, page_title
 
 #let integrity_page(title: [], anonymous: false) = {
   set page(header: header("论文诚信声明", anonymous: anonymous), footer: none)
@@ -32,4 +32,3 @@
   set page(header: none)
   pagebreak(weak: true, to: "odd")
 }
-

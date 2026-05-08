@@ -1,5 +1,5 @@
 #import "../utils/variables.typ": *
-#import "../utils/components.typ": page_title, header
+#import "../utils/components.typ": header, page_title
 
 #let outline_page(anonymous: false) = {
   show outline.entry.where(level: 1): set outline.entry(fill: [
@@ -31,4 +31,3 @@
 
   pagebreak(weak: true, to: "odd")
 }
-

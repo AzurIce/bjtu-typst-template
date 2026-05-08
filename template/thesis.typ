@@ -11,9 +11,7 @@
   outline_page,
   bib_page,
   aknowledgement_page,
-) = document(
-
-)
+) = document()
 
 #show: show_doc
 
@@ -31,7 +29,11 @@
 ]
 
 #abstract_page_en(
-  keywords: ("Maintain consistency with Chinese keywords", "Maintain consistency with Chinese keywords", "separated by semicolons"),
+  keywords: (
+    "Maintain consistency with Chinese keywords",
+    "Maintain consistency with Chinese keywords",
+    "separated by semicolons",
+  ),
 )[
   Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract. Corresponding to the content of the Chinese abstract.
 ]
@@ -67,13 +69,13 @@
 #figure(
   image("../assets/bjtu-black-from-pdf.png"),
   kind: "image",
-  caption: [北京交通大学]
+  caption: [北京交通大学],
 )<bjtu>
 
 #figure(
   image("../assets/bjtu-black-from-pdf.png"),
   kind: "image",
-  caption: [还是北京交通大学]
+  caption: [还是北京交通大学],
 )<bjbjtu>
 
 如 @img:bjtu, @img:bjbjtu 所示，......。
@@ -99,16 +101,14 @@
 #figure(
   table(
     columns: 3,
-    table.header(
-      [量的名称], [单位名称], [单位符号]
-    ),
+    table.header([量的名称], [单位名称], [单位符号]),
     [长度], [米], [m],
     [质量], [千克(公斤)], [kg],
     [时间], [秒], [s],
     [电流], [安[培]], [A],
     [热力学温度], [开[尔文]], [K],
     [物质的量], [摩[尔]], [mol],
-    [发光强度], [坎[德拉]], [cd]
+    [发光强度], [坎[德拉]], [cd],
   ),
   caption: "国际单位制的基本单位",
 )<units>
@@ -117,15 +117,31 @@
   tables.tri_table(
     columns: 3,
     table.header(
-      [量的名称], [单位名称], [单位符号]
+      [量的名称],
+      [单位名称],
+      [单位符号],
     ),
-    [长度], [米], [m],
-    [质量], [千克(公斤)], [kg],
-    [时间], [秒], [s],
-    [电流], [安[培]], [A],
-    [热力学温度], [开[尔文]], [K],
-    [物质的量], [摩[尔]], [mol],
-    [发光强度], [坎[德拉]], [cd]
+    [长度],
+    [米],
+    [m],
+    [质量],
+    [千克(公斤)],
+    [kg],
+    [时间],
+    [秒],
+    [s],
+    [电流],
+    [安[培]],
+    [A],
+    [热力学温度],
+    [开[尔文]],
+    [K],
+    [物质的量],
+    [摩[尔]],
+    [mol],
+    [发光强度],
+    [坎[德拉]],
+    [cd],
   ),
   caption: "国际单位制的基本单位三线表",
 )<units-tri>
@@ -134,7 +150,10 @@
   tables.use_case_table(
     columns: 4,
     table.header(
-      [*用例编号*], [UC1], [*用例名称*], [动画渲染],
+      [*用例编号*],
+      [UC1],
+      [*用例名称*],
+      [动画渲染],
     ),
     fill: (x, y) => if y == 0 {
       blue.lighten(70%)
@@ -144,14 +163,21 @@
         top: 0.7pt + black,
         left: if (x != 0) {
           0.7pt + black
-        }
+        },
       )
     },
-    [*活动者*], [引擎用户], [*优先级*], [高],
-    [*描述*], table.cell(colspan:3)[用户通过引擎提供的 API 接口调用渲染模块，请求渲染动画],
-    [*前置条件*], table.cell(colspan:3)[无],
-    [*后置条件*], table.cell(colspan:3)[引擎成功渲染出动画],
-    [*主事件流*], table.cell(colspan:3)[
+    [*活动者*],
+    [引擎用户],
+    [*优先级*],
+    [高],
+    [*描述*],
+    table.cell(colspan: 3)[用户通过引擎提供的 API 接口调用渲染模块，请求渲染动画],
+    [*前置条件*],
+    table.cell(colspan: 3)[无],
+    [*后置条件*],
+    table.cell(colspan: 3)[引擎成功渲染出动画],
+    [*主事件流*],
+    table.cell(colspan: 3)[
       #set align(left)
       1. 引擎用户调用引擎提供的接口渲染动画时间线；
       2. 引擎对时间线进行求值，通过实例资源池准备渲染实例；
@@ -160,9 +186,12 @@
       5. 将渲染结果编码入输出视频文件
       6. 重复 2-5 步直至完成整个动画时间线渲染。
     ],
-    [*备选事件流*], table.cell(colspan:3)[无],
-    [*异常事件流*], table.cell(colspan:3)[无],
-    [*其他说明*], table.cell(colspan:3)[无],
+    [*备选事件流*],
+    table.cell(colspan: 3)[无],
+    [*异常事件流*],
+    table.cell(colspan: 3)[无],
+    [*其他说明*],
+    table.cell(colspan: 3)[无],
   ),
   caption: "渲染动画用例说明",
 )<use-case>

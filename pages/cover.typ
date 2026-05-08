@@ -35,7 +35,7 @@
     #text(
       size: 字号.二号,
       font: 字体.宋体,
-      weight: "bold"
+      weight: "bold",
     )[本科毕业论文（设计）]
 
     #v(1fr)
@@ -43,7 +43,7 @@
     #text(
       size: 字号.小二,
       font: 字体.黑体,
-      weight: "bold"
+      weight: "bold",
     )[
       #set par(justify: false)
       #info.title
@@ -55,7 +55,7 @@
     #text(
       size: 字号.小二,
       font: 字体.宋体,
-      weight: "bold"
+      weight: "bold",
     )[
       #set par(justify: false)
       #info.title_en
@@ -68,25 +68,23 @@
         width: 100%,
         inset: 2pt,
         stroke: (
-          bottom: 1pt + black
+          bottom: 1pt + black,
         ),
         text(
           font: 字体.宋体,
           size: 字号.三号,
-          bottom-edge: "descender"
+          bottom-edge: "descender",
         )[
           #body
-        ]
-      ) 
+        ],
+      )
     }
-    
+
     #let info_key(body) = {
-      rect(width: 100%, inset: 2pt, 
-       stroke: none,
-       text(
+      rect(width: 100%, inset: 2pt, stroke: none, text(
         font: 字体.宋体,
         size: 字号.三号,
-        [ #body： ]
+        [ #body： ],
       ))
     }
 
@@ -95,16 +93,11 @@
       columns: (80pt, 180pt),
       rows: (28pt, 28pt),
       gutter: 3pt,
-      info_key("学　　院"),
-      info_value(if not anonymous { info.school } else { "██████████" }),
-      info_key("专　　业"),
-      info_value(if not anonymous { info.major } else { "██████████" }),
-      info_key("学生姓名"),
-      info_value(if not anonymous { info.author } else { "██████████" }),
-      info_key("学　　号"),
-      info_value(if not anonymous { info.id } else { "██████████" }),
-      info_key("指导教师"),
-      info_value(if not anonymous { info.mentor } else { "██████████" }),
+      info_key("学　　院"), info_value(if not anonymous { info.school } else { "██████████" }),
+      info_key("专　　业"), info_value(if not anonymous { info.major } else { "██████████" }),
+      info_key("学生姓名"), info_value(if not anonymous { info.author } else { "██████████" }),
+      info_key("学　　号"), info_value(if not anonymous { info.id } else { "██████████" }),
+      info_key("指导教师"), info_value(if not anonymous { info.mentor } else { "██████████" }),
     )
 
     #v(10.5pt)
@@ -114,7 +107,7 @@
     #text(
       size: 字号.小三,
       font: 字体.宋体,
-      weight: "bold"
+      weight: "bold",
     )[#if not anonymous { "北京交通大学" } else { "██████████" }]
 
     #v(12pt) // 用于与 word 模板对齐...

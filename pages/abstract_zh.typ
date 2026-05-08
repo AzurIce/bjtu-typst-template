@@ -1,5 +1,5 @@
 #import "../utils/variables.typ": *
-#import "../utils/components.typ": page_title, header, anonymous_header
+#import "../utils/components.typ": anonymous_header, header, page_title
 
 #let abstract_page_zh(
   keywords: (),
@@ -25,4 +25,3 @@
 
   pagebreak(weak: true)
 }
-
