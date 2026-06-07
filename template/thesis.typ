@@ -14,6 +14,8 @@
 ) = document()
 
 #show: show_doc
+#show figure.where(kind: table): set figure.caption(separator: " ")
+#show figure.where(kind: "image"): set figure.caption(separator: " ")
 
 #cover_page()
 
@@ -196,7 +198,7 @@
   caption: "渲染动画用例说明",
 )<use-case>
 
-如表 @tbl:units @tbl:units-tri @tbl:use-case 所示，......。
+如 @tbl:units @tbl:units-tri @tbl:use-case 所示，......。
 
 #h(2em)公式：
 
