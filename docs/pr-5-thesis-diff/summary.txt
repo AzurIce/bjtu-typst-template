@@ -1,0 +1,17 @@
+base: origin/main
+pages: 21
+ppi: 96
+threshold: 12
+
+page changed_px changed_% bbox
+12     1648  0.185% (95, 946, 326, 987)
+14     1893  0.212% (95, 506, 368, 547)
+
+legend:
+- red: pixels added or darkened in the current working tree
+- blue: pixels removed or lightened from the baseline
+- purple: pixels changed in both directions
+
+diff images:
+- docs/pr-5-thesis-diff/page-12-comparison.png
+- docs/pr-5-thesis-diff/page-14-comparison.png
