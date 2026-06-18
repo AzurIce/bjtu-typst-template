@@ -7,7 +7,7 @@
   page_title("学士论文版权使用授权书")
 
   text[
-    #h(2em)本学士论文作者完全了解#if anonymous { [██████████] } else {
+    本学士论文作者完全了解#if anonymous { [██████████] } else {
       [北京交通大学]
     }有关保留、使用学士论文的规定。特授权#if anonymous { [██████████] } else {
       [北京交通大学]
