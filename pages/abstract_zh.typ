@@ -10,7 +10,6 @@
 
   page_title("中文摘要", use_heading: true)
 
-  set par(first-line-indent: 0em)
   text(weight: "bold")[摘要：]
   // linebreak()
   text[#body]

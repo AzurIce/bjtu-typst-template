@@ -10,7 +10,6 @@
 
   page_title("ABSTRACT", use_heading: true)
 
-  set par(first-line-indent: 0em)
   text(weight: "bold")[ABSTRACT:]
   text[#body]
 

@@ -140,12 +140,7 @@
   // 用于模仿 word 排版方式
   // See: https://github.com/typst/typst/issues/106#issuecomment-2041051807
   set text(top-edge: 0.7em, bottom-edge: -0.3em)
-  set par(
-    spacing: 20pt - 1em,
-    leading: 20pt - 1em,
-    first-line-indent: (amount: 2em, all: true),
-    justify: true,
-  )
+  set par(spacing: 20pt - 1em, leading: 20pt - 1em, first-line-indent: 2em, justify: true)
 
   show: show_figure
   show: show_table
