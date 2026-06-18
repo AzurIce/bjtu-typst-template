@@ -18,8 +18,8 @@
   ]
 
   columns(2)[
-    #set par(first-line-indent: 0em)
     #text[
+      #set par(first-line-indent: 0em)
       #h(2em)本人签名：
       #box(width: 9em)[#line(length: 100%)]
     ]
