@@ -7,7 +7,7 @@
   page_title("学士论文版权使用授权书")
 
   text[
-    #h(2em)本学士论文作者完全了解#if anonymous { [██████████] } else {
+    本学士论文作者完全了解#if anonymous { [██████████] } else {
       [北京交通大学]
     }有关保留、使用学士论文的规定。特授权#if anonymous { [██████████] } else {
       [北京交通大学]
@@ -28,6 +28,7 @@
 
   columns(2)[
     #text[
+      #set par(first-line-indent: 0em)
       #h(2em)学位论文作者签名：
     ]
     #colbreak()
@@ -40,6 +41,7 @@
 
   columns(2)[
     #text[
+      #set par(first-line-indent: 0em)
       #h(2em)签字日期：#h(2.5em)年#h(1.5em)月#h(1.5em)日
     ]
     #colbreak()
