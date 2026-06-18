@@ -27,6 +27,7 @@
   ]
 
   columns(2)[
+    #set par(first-line-indent: 0em)
     #text[
       #h(2em)学位论文作者签名：
     ]
@@ -39,6 +40,7 @@
   linebreak()
 
   columns(2)[
+    #set par(first-line-indent: 0em)
     #text[
       #h(2em)签字日期：#h(2.5em)年#h(1.5em)月#h(1.5em)日
     ]

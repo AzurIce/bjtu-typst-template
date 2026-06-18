@@ -5,6 +5,7 @@
 
 #let anonymous_header(title) = {
   set text(font: 字体.中宋, size: 字号.四号)
+  set par(first-line-indent: 0em)
   h(1fr)
   [#title#h(1em)]
   place(dy: 2.5pt)[#line(stroke: 2.5pt, length: 100%)]
@@ -13,6 +14,7 @@
 
 #let header(title, anonymous: false) = {
   set text(font: 字体.中宋, size: 字号.四号)
+  set par(first-line-indent: 0em)
   let school = if anonymous {
     "██████████"
   } else {
